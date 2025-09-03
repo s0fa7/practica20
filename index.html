@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            background: #f5f5f5;
+            color: black;
+        }
+
+        nav {
+            box-shadow: 0px 25px 46px 0px rgba(34, 60, 80, 0.2);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        footer {
+            background-color: rgb(50, 95, 243);
+            color: white;
+            padding: 3rem;
+
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .header-container {
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+        }
+
+        .btn-outline-success {
+            color: rgb(50, 95, 243);
+            border-color: rgb(50, 95, 243);
+        }
+
+        .btn-outline-success:hover {
+            color: rgb(255, 255, 255);
+            border-color: rgb(50, 95, 243);
+            background-color: rgb(50, 95, 243);
+        }
+
+        .main-container {
+            background-color: rgb(50, 95, 243);
+            color: white;
+        }
+
+        .col-8 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .col-4 img {
+            max-height: 800px;
+            border-radius: 1rem;
+        }
+
+        .card-group {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .carousel {
+            width: 1200px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 400px;
+            height: 300px;
+            flex-shrink: 0;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(50, 50, 50, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: rgb(50, 95, 243);
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(26, 67, 202);
+        }
+
+        .offset-md-2 {
+            margin-right: 17%;
+        }
+
+        .card-body img {
+            width: auto;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#aboutMe">Александра Православная</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#profile">Обо мне</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#advice">Совет</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Контакты</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" />
+                            <button id="search" class="btn btn-outline-success" type="submit">Поиск</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            </ul>
+        </header>
+    </div>
+    <main>
+        <section class="main-container" id="aboutMe">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>Александра Певко</h2>
+                        <p>Саша Певко — послушница монастыря, чьё сердце наполнено любовью к Богу и служению ближним. Её
+                            жизнь посвящена молитве, покою души и стремлению к духовному совершенству. Она стремится
+                            жить согласно заповедям Христовым, распространяя вокруг себя мир и свет веры.</p>
+                        <p>
+                            Простота её натуры, искренняя вера и тихое смирение делают её примером для всех, кто ищет
+                            истинный путь к Господу. Саша верит, что каждый день — это дар Божий, который нужно
+                            проживать достойно и с благодарностью.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img alt="фото сашеньки" src="https://sun9-25.userapi.com/s/v1/ig2/VXpxC1fOYc42DxTuk5QrasGtjrBTf8oY1l74c0CNywjwLP9UsdspLWgEM2zDJNUKVG3rGNABuNEJiYSZVxdiQZN6.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,1080x1620,1280x1920,1440x2160,1707x2560&from=bu&cs=510x765" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile">
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/79f473885b9fd200f44d173a8ef86e23.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Богиня адидаса</h5>
+                        <p class="card-text">Она шла легко, будто парила над землёй, облачённая в белоснежный Адидас,
+                            символизирующий чистоту помыслов и стремление вперёд. Кружевной серебряный крестик тихо
+                            сверкал на груди, словно звезда, указующая верный путь сквозь сумрак сомнений и тревог. В
+                            каждом движении девушки ощущалась гармония двух миров — современного и вечного,
+                            материального и духовного. И эта встреча времён и культур создавала неповторимую атмосферу
+                            лёгкости, красоты и вдохновения.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">последнее обновление 1 секунду назад</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://sun9-75.userapi.com/impg/_WM5MI_ULQknbGnyMkPfxh7Jlf6UAjHTPIHKLA/t2q_GsL-kuw.jpg?size=453x604&quality=96&sign=388256611c32989556548a1d313db91b&type=album" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Лесная фея</h5>
+                        <p class="card-text">Лесная фея скользнула меж деревьев, одета в небесно-голубые одежды
+                            Адидаса, мерцая серебряным крестиком, будто звёздой, озаряющей ночной лес своей мягкой
+                            благодатью.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">последнее обновление 3 месяца назад</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://sun9-26.userapi.com/impg/GUBSTIgdWLP24lbL3FvRde7oDzC1v3DVXiNE0w/32KKJm_wmi0.jpg?size=591x604&quality=96&sign=b8beed214234fd651e9ccd293bb476a2&c_uniq_tag=G-am46F7Eb4iAH-ZDHcFWcHhJnhlGaiuGiBIs3qSXLg&type=album" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Волонтёр</h5>
+                        <p class="card-text">Стройная девушка-природа, окутанная синей тканью Адидаса, игриво танцевала
+                            среди зелени, оставляя едва заметный след сверкающего креста, наполнившего поляну нежностью
+                            и теплом света.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">последнее обновление 3 сентября</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advice">
+            <div class="carousel">
+                <button class="carousel-button prev">&#10094;</button>
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="https://sun9-31.userapi.com/impg/7Wg52LHrQUpObUUi7I4NKjPK-mxnu1hVzgQaTg/lJueI-9T8GU.jpg?size=453x604&quality=96&sign=3ed4460b46ea9acb86defc4a980c8425&c_uniq_tag=s9bAVAdRRRIgq5eCDqq_A2QiRNes1dWDnnF4cI0Kvr4&type=album" alt="Собака" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.pinimg.com/736x/63/7b/42/637b4239b4556de7d91a37737b2a6d31.jpg" alt="Кот" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://avatars.mds.yandex.net/i?id=46a401fe94496a81c7ea60fa0da0b90c_l-9211281-images-thumbs&n=13" alt="Медведь" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.pinimg.com/originals/64/5a/60/645a6052420210cf88101da865f6e310.jpg" alt="Медведь" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://avatars.mds.yandex.net/get-mpic/7067087/img_id8698257700058769944.jpeg/orig" alt="Медведь" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.pinimg.com/originals/d9/e7/e4/d9e7e41c91b0cde60a966c707d826298.jpg" alt="Медведь" />
+                    </div>
+                </div>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <h2 class="text-center mb-4">Получить совет от премудрой Александры</h2>
+                        <form action="#" method="POST" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Ваше имя:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, укажите ваше имя.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Ваш email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, укажите ваш email.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Ваш телефон:</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, укажите ваш телефон.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение:</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, напишите ваше сообщение.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg d-block mx-auto">Отправить
+                                сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding bg-light" id="contact">
+            <div class="container">
+                <h2 class="text-center mb-5">Контакты</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope fa-3x mb-3"><img
+                                        src="https://static.tildacdn.com/tild6432-3437-4837-b262-346632616662/2.png"></i>
+                                <h5>Email</h5>
+                                <p>sashapewko@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-phone fa-3x mb-3"><img
+                                        src="https://www.iconpacks.net/icons/1/free-phone-icon-14-thumb.png"></i>
+                                <h5>Телефон</h5>
+                                <p>+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                © 2025 Федотова-Баряева. Все права защищены.
+            </p>
+        </footer>
+    </main>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+    </script>
+</body>
+
+</html>
